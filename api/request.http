@@ -1,0 +1,21 @@
+@PORT = 3002
+
+### Get all news (with optional filters)
+GET http://localhost:{{PORT}}/api/news?page=1&limit=10&catagory=Technology&keyword=Sample
+Accept: application/json
+
+### Create a news item
+POST http://localhost:{{PORT}}/api/news/post
+Content-Type: application/json
+
+{
+  "title": "Sample News Title",
+  "description": "Short description of the news.",
+  "imageUrl": "https://example.com/image.jpg",
+  "content": "Full content of the news article.",
+  "category": "Technology"
+}
+
+### Get all categories
+GET http://localhost:{{PORT}}/api/catagories
+Accept: application/json
