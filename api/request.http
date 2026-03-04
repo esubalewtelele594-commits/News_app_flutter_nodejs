@@ -1,7 +1,7 @@
 @PORT = 3002
 
 ### Get all news (with optional filters)
-GET http://localhost:{{PORT}}/api/news?page=1&limit=10&catagory=Technology&keyword=Sample
+GET http://localhost:{{PORT}}/api/news?page=1&limit=10&category=Technology&keyword=Sample
 Accept: application/json
 
 ### Create a news item
@@ -17,5 +17,211 @@ Content-Type: application/json
 }
 
 ### Get all categories
-GET http://localhost:{{PORT}}/api/catagories
+GET http://localhost:{{PORT}}/api/categories
+Accept: application/json
+
+### BULK: Technology (5 items)
+POST http://localhost:{{PORT}}/api/news/post
+Content-Type: application/json
+
+{
+  "title": "EU advances AI safety rules targeting high-risk systems",
+  "description": "EU legislators reach agreement on AI rules focused on transparency and safety.",
+  "imageUrl": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f",
+  "content": "EU institutions have moved closer to finalising new AI regulations aimed at high-risk systems, requiring stronger transparency and oversight measures to protect consumers and businesses.",
+  "category": "Technology"
+}
+###
+POST http://localhost:{{PORT}}/api/news/post
+Content-Type: application/json
+
+{
+  "title": "Major chipmaker announces expansion to meet demand",
+  "description": "Global semiconductor firm to open new fab to ease supply constraints.",
+  "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475",
+  "content": "A leading chip manufacturer today announced plans to build a new fabrication plant aimed at increasing production capacity for advanced nodes amid persistent global demand.",
+  "category": "Technology"
+}
+
+POST http://localhost:{{PORT}}/api/news/post
+Content-Type: application/json
+
+{
+  "title": "Breakthrough in battery tech could extend EV range",
+  "description": "Researchers unveil new battery chemistry with improved energy density.",
+  "imageUrl": "https://images.unsplash.com/photo-1549921296-3f2f3f3c8d9d",
+  "content": "University researchers published findings on a new battery formulation that promises higher energy density and faster charging, potentially increasing electric vehicle range.",
+  "category": "Technology"
+}
+
+POST http://localhost:{{PORT}}/api/news/post
+Content-Type: application/json
+
+{
+  "title": "BigTech firm releases developer tools for multimodal models",
+  "description": "New SDK targets easier integration of text, image, and audio models.",
+  "imageUrl": "https://images.unsplash.com/photo-1526378725516-1fae6b138b1a",
+  "content": "A major technology company released an SDK that simplifies building applications using multimodal AI, enabling developers to combine text, vision and audio processing more easily.",
+  "category": "Technology"
+}
+
+POST http://localhost:{{PORT}}/api/news/post
+Content-Type: application/json
+
+{
+  "title": "Startup raises $150M to scale automated code assistants",
+  "description": "Investment round backs tools that accelerate developer workflows.",
+  "imageUrl": "https://images.unsplash.com/photo-1555949963-aa79dcee981d",
+  "content": "A startup focused on code-generation and developer productivity announced a $150 million funding round, planning international expansion and hiring across engineering and safety teams.",
+  "category": "Technology"
+}
+
+### BULK: Sports (5 items)
+POST http://localhost:{{PORT}}/api/news/post
+Content-Type: application/json
+
+{
+  "title": "National team wins dramatic final to claim regional title",
+  "description": "Late goal seals a memorable victory in the tournament final.",
+  "imageUrl": "https://images.unsplash.com/photo-1517927033932-b7b2b3d8b4f0",
+  "content": "In a thrilling final, the national side staged a late comeback to secure the championship, delighting supporters and sparking nationwide celebrations.",
+  "category": "Sports"
+}
+###
+POST http://localhost:{{PORT}}/api/news/post
+Content-Type: application/json
+
+{
+  "title": "Star striker completes record transfer to European club",
+  "description": "Top forward signs a multi-year deal after a high-profile move.",
+  "imageUrl": "https://images.unsplash.com/photo-1518611012118-696072aa579a",
+  "content": "The forward has joined a leading European club on a record transfer fee, with expectations high that he will bolster the team's title ambitions.",
+  "category": "Sports"
+}
+
+POST http://localhost:{{PORT}}/api/news/post
+Content-Type: application/json
+
+{
+  "title": "Tennis champion advances to semis after straight-sets win",
+  "description": "Top seed moves through comfortably to the next round.",
+  "imageUrl": "https://images.unsplash.com/photo-1521412644187-c49fa049e84d",
+  "content": "The top-seeded player dominated on serve and return, securing a straight-sets victory and booking a semi-final spot in the tournament.",
+  "category": "Sports"
+}
+
+POST http://localhost:{{PORT}}/api/news/post
+Content-Type: application/json
+
+{
+  "title": "Local marathon sees record participation and charity funds raised",
+  "description": "Thousands ran to support health charities at the annual event.",
+  "imageUrl": "https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf",
+  "content": "The city's annual marathon reported record turnout, with runners raising significant funds for local health initiatives while organisers praised the community spirit.",
+  "category": "Sports"
+}
+
+POST http://localhost:{{PORT}}/api/news/post
+Content-Type: application/json
+
+{
+  "title": "Basketball rookie makes immediate impact with rookie-of-the-week nod",
+  "description": "Young player impresses with scoring and defensive plays.",
+  "imageUrl": "https://images.unsplash.com/photo-1517649763962-0c623066013b",
+  "content": "The rookie averaged double figures in points and contributed key defensive plays, earning recognition as the league's rookie of the week.",
+  "category": "Sports"
+}
+
+### BULK: Health (5 items)
+POST http://localhost:{{PORT}}/api/news/post
+Content-Type: application/json
+
+{
+  "title": "WHO updates guidance on seasonal respiratory viruses",
+  "description": "Public-health agency issues updated recommendations for at-risk groups.",
+  "imageUrl": "https://images.unsplash.com/photo-1587500150423-7d19f34d0a0f",
+  "content": "The World Health Organization issued updated guidance for managing seasonal respiratory infections, emphasising vaccination and protective measures for vulnerable populations.",
+  "category": "Health"
+}
+###
+POST http://localhost:{{PORT}}/api/news/post
+Content-Type: application/json
+
+{
+  "title": "New study links diet patterns to improved heart health",
+  "description": "Researchers find correlation between plant-forward diets and lower cardiovascular risk.",
+  "imageUrl": "https://images.unsplash.com/photo-1498837167922-ddd27525d352",
+  "content": "A peer-reviewed study suggests that diets high in whole grains, fruits and vegetables are associated with a reduced risk of heart disease over a multi-year follow-up.",
+  "category": "Health"
+}
+
+POST http://localhost:{{PORT}}/api/news/post
+Content-Type: application/json
+
+{
+  "title": "Major hospital adopts telehealth for routine follow-ups",
+  "description": "Remote consultations expected to improve access and reduce waiting times.",
+  "imageUrl": "https://images.unsplash.com/photo-1580281657526-3c8b887464ef",
+  "content": "A leading medical centre rolled out telehealth services for non-urgent follow-ups, aiming to improve continuity of care and reduce clinic congestion.",
+  "category": "Health"
+}
+
+POST http://localhost:{{PORT}}/api/news/post
+Content-Type: application/json
+
+{
+  "title": "Mental health hotlines see increased usage; funding expanded",
+  "description": "Authorities expand support after a rise in calls for mental-health help.",
+  "imageUrl": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+  "content": "Following increased demand for mental-health services, local and national bodies announced new funding to expand crisis lines and community programs.",
+  "category": "Health"
+}
+
+### BULK: Business (5 items)
+POST http://localhost:{{PORT}}/api/news/post
+Content-Type: application/json
+
+{
+  "title": "Tech giant posts stronger-than-expected quarterly results",
+  "description": "Earnings beat analyst forecasts, shares jump in after-hours trading.",
+  "imageUrl": "https://images.unsplash.com/photo-1542223616-1f1b7a3a0c6d",
+  "content": "The company's latest quarter showed revenue growth driven by cloud and services, topping analyst estimates and prompting a positive market reaction.",
+  "category": "Business"
+}
+###
+POST http://localhost:{{PORT}}/api/news/post
+Content-Type: application/json
+
+{
+  "title": "Major retailer announces sustainability drive across supply chain",
+  "description": "Initiative aims to reduce emissions and improve transparency.",
+  "imageUrl": "https://images.unsplash.com/photo-1507679799987-c73779587ccf",
+  "content": "A national retailer unveiled a plan to cut emissions across its logistics and supplier network, including new transparency reporting and supplier support programs.",
+  "category": "Business"
+}
+
+POST http://localhost:{{PORT}}/api/news/post
+Content-Type: application/json
+
+{
+  "title": "Central bank holds rates steady amid inflation uncertainty",
+  "description": "Monetary authority cites mixed data and signals caution on future moves.",
+  "imageUrl": "https://images.unsplash.com/photo-1454165205744-3b78555e5572",
+  "content": "In its latest policy meeting, the central bank kept interest rates unchanged, noting persistent inflationary pressures but also weaker growth indicators.",
+  "category": "Business"
+}
+
+POST http://localhost:{{PORT}}/api/news/post
+Content-Type: application/json
+
+{
+  "title": "Transit startup secures funding for urban mobility expansion",
+  "description": "New backing will fund service expansion into three additional cities.",
+  "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+  "content": "A mobility startup announced a series B round to expand its shared transit services, targeting suburban routes and partnerships with local authorities.",
+  "category": "Business"
+}
+
+### After running the POSTs, verify inserted data:
+GET http://localhost:{{PORT}}/api/news?page=1&limit=50
 Accept: application/json

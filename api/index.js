@@ -8,17 +8,17 @@ connectDb()
 app.use(bodyParser.json())
 app.use('/api/news', route)
 
-const catagories = [
+const categories = [
 {name: 'All', icon: 'All'},
 {name: 'Technology', icon: 'computer' },
 {name: 'Sports', icon: 'sports_basketball' },
 {name: 'Health', icon: 'health_and_safety' },
 {name: 'Business', icon: 'business'},
 ];
-app.get('/api/catagories', async(req, res) => {
+app.get('/api/categories', async(req, res) => {
     res.json({
         sucess: true,
-        data: catagories
+        data: categories
     })
 } )
 app.listen(process.env.PORT, console.log(`Listening on ${process.env.PORT}`))
